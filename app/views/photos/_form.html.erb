@@ -1,4 +1,4 @@
-<%= form_with(model: photo, local: true) do |form| %>
+<%= form_with model: photo, local: true, html: { multipart: true } do |form| %>
   <% if photo.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(photo.errors.count, "Ошибка") %> Запрещено сохранять эту фотографию:</h2>
@@ -12,7 +12,13 @@
   <% end %>
 
   <div class="form-group">
-    <%= form.label :description %>
+    <%= form.label :Картинка %>
+    <%= form.file_field :image, class: 'form-control' %>
+  </div>
+
+
+  <div class="form-group">
+    <%= form.label :Описание %>
     <%= form.text_field :description, class: 'form-control' %>
   </div>
 
