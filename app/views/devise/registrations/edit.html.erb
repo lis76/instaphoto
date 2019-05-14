@@ -1,0 +1,54 @@
+<div class="card devise-form container1">
+  <div class="card-header">
+    <h2>Редактировать <%= current_user.email %></h2>
+  </div>
+  <div class="card-body">
+
+
+      <div class="jumbotron-3 jumbotron h2 jumbotron h3 jumbotron p">
+
+
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+            <%= render "devise/shared/error_messages", resource: resource %>
+
+            <div class="form-group">
+              <%= f.label :email %><br />
+              <%= f.email_field :email, autofocus: true, class: 'form-control', autocomplete: "Электронная почта" %>
+            </div>
+
+            <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+              <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+            <% end %>
+
+            <div class="form-group">
+              <%= f.label :password %> <i>(Оставьте пустым, если не хотите его менять)</i><br />
+              <%= f.password_field :password, class: 'form-control', autocomplete: "Новый пароль" %>
+              <% if @minimum_password_length %>
+                <br />
+                <em> Минимум <%= @minimum_password_length %> символов </em>
+              <% end %>
+            </div>
+
+            <div class="form-group">
+              <%= f.label :password_confirmation %><br />
+              <%= f.password_field :password_confirmation, class: 'form-control', autocomplete: "Новый пароль" %>
+            </div>
+
+            <div class="form-group">
+              <%= f.label :current_password %> <i>(Нам нужен ваш текущий пароль для подтверждения изменений)</i><br />
+              <%= f.password_field :current_password, class: 'form-control', autocomplete: "Текущий пароль" %>
+            </div>
+
+            <div class="actions">
+              <%= f.submit "Обновить", class: 'btn btn-primary' %>
+            </div>
+          <% end %>
+
+          <h3>Удалить мой аккаунт</h3>
+
+          <p>Вы уверенны? <%= button_to "Удалить мой аккаунт", registration_path(resource_name), data: { confirm: "Вы уверены?" }, method: :delete, class: 'btn btn-primary' %></p>
+
+          <%= link_to "Назад", :back %>
+      </div>
+  </div>
+</div>

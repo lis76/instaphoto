@@ -1,0 +1,38 @@
+<div class="jumbotron jumbotron-landing-1 container1">
+
+
+  <h1>Фотографии</h1>
+
+    <p id="notice"><%= notice %></p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Описание</th>
+          <th>eMail Пользователя</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @photos.each do |photo| %>
+          <tr>
+            <td><%= photo.description %></td>
+            <td><%= photo.user.email if photo.user %></td>
+            <td><%= link_to 'Показать', photo, class: 'btn btn-primary' %></td>
+
+            <td><% if photo.user == current_user %>
+                <%= link_to 'Редактировать', edit_photo_path(photo), class: 'btn btn-primary' %> <% end %></td>
+
+            <td><% if photo.user == current_user %>
+                <%= link_to 'Удалить', photo, method: :delete, data: { confirm: 'Вы уверены?' }, class: 'btn btn-primary' %> <% end %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>
+    <% if user_signed_in? %>
+    <%= link_to 'Добавить фотографию', new_photo_path, class: 'btn btn-primary' %>
+    <% end %>
+</div>
