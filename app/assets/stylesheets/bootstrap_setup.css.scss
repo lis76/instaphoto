@@ -3,6 +3,7 @@ $display4-size: 2.5rem;
 $jumbotron-bg: rgba(255,255,255, 0.2);
 $card-cap-bg: rgba(255,255,255, 0.2);
 $card-bg: rgba(255,255,255, 0.1);
+$body-bg: #ECF0F1;
 @import "bootstrap";
 .container-background {
   width: 100%;
@@ -17,13 +18,23 @@ $card-bg: rgba(255,255,255, 0.1);
 }
 
 .devise-form1 {
-  width: 85%;
+  display: inline-block;
+  margin-left: auto;
   margin-right: auto;
+  text-align: left;
+}
+
+.photo-form {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
 }
 
 .container-login{
   padding-right: 0;
   padding-left: 0;
+  text-align: center;
 }
 
 .bg-transparent {
@@ -48,10 +59,6 @@ $card-bg: rgba(255,255,255, 0.1);
   margin-right: auto;
 }
 
-.bg-grey{
-  background-color: #ECF0F1;
-  height: 100vh;
-}
 
 .container {
   color: #fff;

@@ -1,18 +1,19 @@
-<div class="jumbotron jumbotron-landing-1 container1">
-
-        <% @photos.each do |photo| %>
-            <%= image_tag photo.image.url(:thumb) %>
-            <%= photo.description %>
-            <%= photo.user.email if photo.user %>
-            <%= link_to 'Показать', photo, class: 'btn btn-primary' %>
+<% @photos.each do |photo| %>
+          <div class="card devise-form1 container1">
+              <div class="card-header">
+                <%= image_tag photo.image.url(:medium) %><br>
+                <strong><%= photo.description %></strong><br>
+                <%= photo.user.email if photo.user %><br>
+                <%= link_to 'Показать', photo, class: 'btn btn-primary' %>
             <% if photo.user == current_user %>
-                <%= link_to 'Редактировать', edit_photo_path(photo), class: 'btn btn-primary' %>
+               | <%= link_to 'Редактировать', edit_photo_path(photo), class: 'btn btn-primary' %> |
                 <%= link_to 'Удалить', photo, method: :delete, data: { confirm: 'Вы уверены?' }, class: 'btn btn-primary' %>
             <% end %>
+              </div>
+          </div>
         <% end %>
 
     <br>
     <% if user_signed_in? %>
-    <%= link_to 'Добавить фотографию', new_photo_path, class: 'btn btn-primary' %>
+      <%= link_to 'Добавить фотографию', new_photo_path, class: 'btn btn-primary' %>
     <% end %>
-</div>

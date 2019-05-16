@@ -13757,3 +13757,1791 @@ Processing by PhotosController#show as HTML
 Completed 200 OK in 107ms (Views: 101.6ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/" for ::1 at 2019-05-16 07:51:43 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/lis/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#landing as HTML
+  Rendering pages/landing.html.erb within layouts/application
+  Rendered pages/landing.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+Completed 200 OK in 818ms (Views: 795.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-05-16 07:51:45 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (134.9ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+Completed 200 OK in 210ms (Views: 187.7ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-05-16 07:51:53 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lOPwbQeQy/MkRTZibHbX5qWn32HIortH9/Dpt9c2nuVMEtPTBXm/TA6o/7efTnw62Au+LV8e6xWPbk3p/3Afqw==", "user"=>{"email"=>"lis_lis76@mail.ru", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Авторизоваться"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "lis_lis76@mail.ru"], ["LIMIT", 1]]
+  ↳ /home/lis/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 232ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-05-16 07:51:53 +0300
+Processing by PagesController#landing as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+Redirected to http://localhost:3000/photos
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 07:51:53 +0300
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photos/index.html.erb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  Rendered photos/index.html.erb within layouts/application (43.4ms)
+  Rendered layouts/_navigation.html.erb (3.1ms)
+Completed 200 OK in 117ms (Views: 99.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 07:52:31 +0300
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photos/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  Rendered photos/index.html.erb within layouts/application (11.0ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+Completed 200 OK in 123ms (Views: 121.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/photos/7" for ::1 at 2019-05-16 07:52:43 +0300
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:57
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:17
+  Rendered photos/show.html.erb within layouts/application (9.2ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+Completed 200 OK in 84ms (Views: 77.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 07:52:47 +0300
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photos/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  Rendered photos/index.html.erb within layouts/application (13.7ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+Completed 200 OK in 75ms (Views: 73.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/photos/7" for ::1 at 2019-05-16 07:53:07 +0300
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPhoto Load (0.8ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:57
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:17
+  Rendered photos/show.html.erb within layouts/application (14.0ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+Completed 200 OK in 128ms (Views: 121.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/photos/7" for ::1 at 2019-05-16 07:59:03 +0300
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:57
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:17
+  Rendered photos/show.html.erb within layouts/application (10.3ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+Completed 200 OK in 6517ms (Views: 6513.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 08:07:16 +0300
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photos/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  Rendered photos/index.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_navigation.html.erb (4.1ms)
+Completed 200 OK in 111ms (Views: 108.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 08:10:50 +0300
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photos/index.html.erb:1
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  Rendered photos/index.html.erb within layouts/application (55.2ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+Completed 200 OK in 123ms (Views: 120.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 08:16:23 +0300
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photos/index.html.erb:1
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  Rendered photos/index.html.erb within layouts/application (23.9ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+Completed 200 OK in 3572ms (Views: 3565.5ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/photos/7" for ::1 at 2019-05-16 08:16:36 +0300
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:57
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:13
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:17
+  Rendered photos/show.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_navigation.html.erb (2.9ms)
+Completed 200 OK in 119ms (Views: 115.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 08:16:46 +0300
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photos/index.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  Rendered photos/index.html.erb within layouts/application (19.8ms)
+  Rendered layouts/_navigation.html.erb (4.5ms)
+Completed 200 OK in 135ms (Views: 131.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 08:17:26 +0300
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photos/index.html.erb:1
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  Rendered photos/index.html.erb within layouts/application (29.6ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+Completed 200 OK in 127ms (Views: 122.0ms | ActiveRecord: 2.4ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-05-16 08:17:31 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qzLYCIP2vUBoNZwI3NmDEjUXtAJpxNzZEKk7jidbUqVVjY8F1muWx+fE6l44REtSlQeMREsp2hm9nOWG2KRNBA=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/lis/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/lis/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/lis/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 22ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-05-16 08:17:31 +0300
+Processing by PagesController#landing as HTML
+  Rendering pages/landing.html.erb within layouts/application
+  Rendered pages/landing.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+Completed 200 OK in 145ms (Views: 144.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-05-16 08:17:33 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.2ms)
+  Rendered layouts/_navigation.html.erb (3.2ms)
+Completed 200 OK in 104ms (Views: 101.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-05-16 08:17:39 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0BDFFxEroWFdUKk++rF1q0quqwjyg1HtUBgnjNg3wQGgI5Neg4t3vkmoe5Ba9cYdOi2Fvr7HqHeK8A1ieNd6rQ==", "user"=>{"email"=>"lis_lis76@mail.ru", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Авторизоваться"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "lis_lis76@mail.ru"], ["LIMIT", 1]]
+  ↳ /home/lis/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 194ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-05-16 08:17:39 +0300
+Processing by PagesController#landing as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+Redirected to http://localhost:3000/photos
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 08:17:39 +0300
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.8ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photos/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  Rendered photos/index.html.erb within layouts/application (19.0ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+Completed 200 OK in 71ms (Views: 68.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/photos/7/edit" for ::1 at 2019-05-16 08:17:44 +0300
+Processing by PhotosController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:57
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/lis/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."user_id" = ? AND "photos"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:52
+  Rendering photos/edit.html.erb within layouts/application
+  Rendered photos/_form.html.erb (5.7ms)
+  Rendered photos/edit.html.erb within layouts/application (13.2ms)
+  Rendered layouts/_navigation.html.erb (3.1ms)
+Completed 200 OK in 104ms (Views: 73.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 08:17:48 +0300
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photos/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  Rendered photos/index.html.erb within layouts/application (46.9ms)
+  Rendered layouts/_navigation.html.erb (3.3ms)
+Completed 200 OK in 141ms (Views: 135.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/photos/7" for ::1 at 2019-05-16 08:17:49 +0300
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:57
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:13
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:17
+  Rendered photos/show.html.erb within layouts/application (16.8ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+Completed 200 OK in 116ms (Views: 109.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 08:28:39 +0300
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.8ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photos/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  Rendered photos/index.html.erb within layouts/application (36.4ms)
+  Rendered layouts/_navigation.html.erb (1.8ms)
+Completed 200 OK in 154ms (Views: 148.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/photos/7/edit" for ::1 at 2019-05-16 08:28:50 +0300
+Processing by PhotosController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:57
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/lis/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."user_id" = ? AND "photos"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:52
+  Rendering photos/edit.html.erb within layouts/application
+  Rendered photos/_form.html.erb (10.1ms)
+  Rendered photos/edit.html.erb within layouts/application (16.7ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+Completed 200 OK in 161ms (Views: 145.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 08:29:32 +0300
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photos/index.html.erb:1
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  Rendered photos/index.html.erb within layouts/application (26.0ms)
+  Rendered layouts/_navigation.html.erb (1.8ms)
+Completed 200 OK in 118ms (Views: 110.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/photos/7/edit" for ::1 at 2019-05-16 08:29:44 +0300
+Processing by PhotosController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:57
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/lis/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."user_id" = ? AND "photos"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:52
+  Rendering photos/edit.html.erb within layouts/application
+  Rendered photos/_form.html.erb (3.5ms)
+  Rendered photos/edit.html.erb within layouts/application (9.9ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+Completed 200 OK in 106ms (Views: 76.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 08:30:36 +0300
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photos/index.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  Rendered photos/index.html.erb within layouts/application (14.1ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+Completed 200 OK in 3711ms (Views: 3707.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/photos/8" for ::1 at 2019-05-16 08:31:11 +0300
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:57
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:13
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:17
+  Rendered photos/show.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+Completed 200 OK in 72ms (Views: 63.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/photos/8" for ::1 at 2019-05-16 08:33:42 +0300
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:57
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:17
+  Rendered photos/show.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_navigation.html.erb (6.5ms)
+Completed 200 OK in 150ms (Views: 147.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 08:34:27 +0300
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photos/index.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:8
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  Rendered photos/index.html.erb within layouts/application (30.1ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+Completed 200 OK in 102ms (Views: 99.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/photos/7" for ::1 at 2019-05-16 08:34:30 +0300
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:57
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:17
+  Rendered photos/show.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_navigation.html.erb (3.9ms)
+Completed 200 OK in 94ms (Views: 85.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/photos/7" for ::1 at 2019-05-16 08:35:39 +0300
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:57
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:17
+  Rendered photos/show.html.erb within layouts/application (8.8ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+Completed 200 OK in 96ms (Views: 92.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 08:35:48 +0300
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photos/index.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  Rendered photos/index.html.erb within layouts/application (13.2ms)
+  Rendered layouts/_navigation.html.erb (2.5ms)
+Completed 200 OK in 87ms (Views: 85.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 08:35:50 +0300
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photos/index.html.erb:1
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  Rendered photos/index.html.erb within layouts/application (35.6ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+Completed 200 OK in 136ms (Views: 134.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/photos/8" for ::1 at 2019-05-16 08:35:52 +0300
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:57
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:17
+  Rendered photos/show.html.erb within layouts/application (9.2ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+Completed 200 OK in 69ms (Views: 67.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/photos/8" for ::1 at 2019-05-16 08:36:32 +0300
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:57
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:13
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:17
+  Rendered photos/show.html.erb within layouts/application (6.8ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+Completed 200 OK in 126ms (Views: 122.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/photos/8" for ::1 at 2019-05-16 08:37:36 +0300
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:57
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:17
+  Rendered photos/show.html.erb within layouts/application (14.8ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+Completed 200 OK in 87ms (Views: 81.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 08:37:58 +0300
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photos/index.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  Rendered photos/index.html.erb within layouts/application (14.9ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+Completed 200 OK in 62ms (Views: 60.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-05-16 08:38:48 +0300
+Processing by PagesController#landing as HTML
+  Rendering pages/landing.html.erb within layouts/application
+  Rendered pages/landing.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.6ms)
+Completed 200 OK in 95ms (Views: 92.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-05-16 08:38:50 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (12.3ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+Completed 200 OK in 89ms (Views: 85.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-05-16 08:39:08 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WYNSNJ0NwxHXuvggEKm5XPC+85MX9vve6JDdoGqW/bmSN1x9dPfHtWiNQTgE/6+Mm5mkK24aJR1SEy+ylXJCtw==", "user"=>{"email"=>"lis_lis76@mail.ru", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Авторизоваться"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "lis_lis76@mail.ru"], ["LIMIT", 1]]
+  ↳ /home/lis/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 189ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-05-16 08:39:09 +0300
+Processing by PagesController#landing as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+Redirected to http://localhost:3000/photos
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 08:39:09 +0300
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photos/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  Rendered photos/index.html.erb within layouts/application (19.2ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+Completed 200 OK in 77ms (Views: 74.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/photos/8" for ::1 at 2019-05-16 08:39:11 +0300
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:57
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:17
+  Rendered photos/show.html.erb within layouts/application (10.9ms)
+  Rendered layouts/_navigation.html.erb (1.9ms)
+Completed 200 OK in 88ms (Views: 84.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/photos/8" for ::1 at 2019-05-16 08:43:06 +0300
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:57
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:13
+  Rendered photos/show.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_navigation.html.erb (3.1ms)
+Completed 200 OK in 161ms (Views: 146.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/photos/8" for ::1 at 2019-05-16 08:43:08 +0300
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:57
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:13
+  Rendered photos/show.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+Completed 200 OK in 60ms (Views: 56.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-05-16 08:43:26 +0300
+Processing by PagesController#landing as HTML
+  Rendering pages/landing.html.erb within layouts/application
+  Rendered pages/landing.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.5ms)
+Completed 200 OK in 103ms (Views: 101.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-05-16 08:43:30 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (6.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (12.0ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+Completed 200 OK in 104ms (Views: 102.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-05-16 08:43:38 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ArlZ9kcO/4Pjy5jsqtTO7QYsntpY/M62ZAPns9jzOXjixJj4tOZFnGaptx4+eqfNnxVIMZS9Dasa8M0Ofy4yDg==", "user"=>{"email"=>"lis_lis76@mail.ru", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Авторизоваться"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "lis_lis76@mail.ru"], ["LIMIT", 1]]
+  ↳ /home/lis/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 178ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-05-16 08:43:38 +0300
+Processing by PagesController#landing as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+Redirected to http://localhost:3000/photos
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 08:43:38 +0300
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photos/index.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  Rendered photos/index.html.erb within layouts/application (11.8ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+Completed 200 OK in 67ms (Views: 65.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/photos/7" for ::1 at 2019-05-16 08:43:42 +0300
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:57
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:13
+  Rendered photos/show.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_navigation.html.erb (1.8ms)
+Completed 200 OK in 79ms (Views: 76.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/photos/7" for ::1 at 2019-05-16 08:43:52 +0300
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:57
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:13
+  Rendered photos/show.html.erb within layouts/application (15.0ms)
+  Rendered layouts/_navigation.html.erb (4.8ms)
+Completed 200 OK in 159ms (Views: 154.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 08:46:59 +0300
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photos/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  Rendered photos/index.html.erb within layouts/application (18.3ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+Completed 200 OK in 3993ms (Views: 3990.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 08:47:03 +0300
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photos/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  Rendered photos/index.html.erb within layouts/application (10.2ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+Completed 200 OK in 80ms (Views: 77.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 08:48:02 +0300
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photos/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  Rendered photos/index.html.erb within layouts/application (23.4ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+Completed 200 OK in 3922ms (Views: 3919.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 08:48:30 +0300
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photos/index.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  Rendered photos/index.html.erb within layouts/application (19.2ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+Completed 200 OK in 3706ms (Views: 3704.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 08:49:03 +0300
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photos/index.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  Rendered photos/index.html.erb within layouts/application (16.2ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+Completed 200 OK in 3989ms (Views: 3986.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 08:49:23 +0300
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photos/index.html.erb:1
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  Rendered photos/index.html.erb within layouts/application (19.9ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+Completed 200 OK in 3679ms (Views: 3675.6ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/photos/8" for ::1 at 2019-05-16 08:53:08 +0300
+Processing by PhotosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"B0s00pc2ZbV8fWckTm1Xtb2yYydWyaKwtlUyzkRhRSS6rx9Thkt3HAAf1DBScGTXMn1G5Twc1gV9DjVUHJNfxg==", "id"=>"8"}
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:57
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/lis/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."user_id" = ? AND "photos"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:52
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/photos_controller.rb:45
+  [1m[36mPhoto Destroy (4.9ms)[0m  [1m[31mDELETE FROM "photos" WHERE "photos"."id" = ?[0m  [["id", 8]]
+  ↳ app/controllers/photos_controller.rb:45
+  [1m[35m (11.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/photos_controller.rb:45
+[paperclip] deleting /home/lis/instaphoto/public/system/photos/images/000/000/008/original/147672885158051813a2a586.45410780.jpg
+[paperclip] deleting /home/lis/instaphoto/public/system/photos/images/000/000/008/medium/147672885158051813a2a586.45410780.jpg
+[paperclip] deleting /home/lis/instaphoto/public/system/photos/images/000/000/008/thumb/147672885158051813a2a586.45410780.jpg
+Redirected to http://localhost:3000/photos
+Completed 302 Found in 49ms (ActiveRecord: 17.2ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 08:53:08 +0300
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (5.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photos/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  Rendered photos/index.html.erb within layouts/application (32.4ms)
+  Rendered layouts/_navigation.html.erb (5.8ms)
+Completed 200 OK in 148ms (Views: 140.7ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/photos/new" for ::1 at 2019-05-16 08:53:10 +0300
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/lis/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (7.5ms)
+  Rendered photos/new.html.erb within layouts/application (10.8ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+Completed 200 OK in 159ms (Views: 139.4ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/photos" for ::1 at 2019-05-16 08:53:37 +0300
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oxtIDP4PVfXlIDeuF/GEvI8XqiAjfzpwZLbxDUsT0NEfF9hNSsJLI5+UHOIg4/v5W15OBtBv0H0GFH94qiQllw==", "photo"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x00007f6ce43d3580 @tempfile=#<Tempfile:/tmp/RackMultipart20190516-21129-21gtvz.JPG>, @original_filename="2019-01-30 20-41-24.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[image]\"; filename=\"2019-01-30 20-41-24.JPG\"\r\nContent-Type: image/jpeg\r\n">, "description"=>"Bagira"}, "commit"=>"Create Photo"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/lis/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[paperclip] Trying to link /tmp/RackMultipart20190516-21129-21gtvz.JPG to /tmp/308e577a754b01f07feb31cdfa892d1d20190516-21129-1l25to5.JPG
+[paperclip] Trying to link /tmp/308e577a754b01f07feb31cdfa892d1d20190516-21129-1l25to5.JPG to /tmp/1a292833fa5bb01f45c6c5aa7b3a63ba20190516-21129-15cmd6l.JPG
+Command :: file -b --mime '/tmp/1a292833fa5bb01f45c6c5aa7b3a63ba20190516-21129-15cmd6l.JPG'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/308e577a754b01f07feb31cdfa892d1d20190516-21129-1l25to5.JPG[0]' 2>/dev/null
+[paperclip] An error was received while processing: #<Paperclip::Errors::NotIdentifiedByImageMagickError: Paperclip::Errors::NotIdentifiedByImageMagickError>
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/308e577a754b01f07feb31cdfa892d1d20190516-21129-1l25to5.JPG[0]' 2>/dev/null
+[paperclip] An error was received while processing: #<Paperclip::Errors::NotIdentifiedByImageMagickError: Paperclip::Errors::NotIdentifiedByImageMagickError>
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/photos_controller.rb:26
+[paperclip] Trying to link /tmp/308e577a754b01f07feb31cdfa892d1d20190516-21129-1l25to5.JPG to /tmp/1a292833fa5bb01f45c6c5aa7b3a63ba20190516-21129-8y8vmq.JPG
+Command :: file -b --mime '/tmp/1a292833fa5bb01f45c6c5aa7b3a63ba20190516-21129-8y8vmq.JPG'
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/photos_controller.rb:26
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (15.7ms)
+  Rendered photos/new.html.erb within layouts/application (18.4ms)
+  Rendered layouts/_navigation.html.erb (3.3ms)
+Completed 200 OK in 347ms (Views: 185.7ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/photos" for ::1 at 2019-05-16 08:53:51 +0300
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0cyVGzAUk/1iI6jmzUd7yQdioZsfvuOGXwLqCY4fXN1sKL6aIWmBVB5BG/LRWkiriK2EWXVrlzOUWe2T1u1GPw==", "photo"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x00007f6d04a9ed68 @tempfile=#<Tempfile:/tmp/RackMultipart20190516-21129-11lo3ne.JPG>, @original_filename="2019-01-30 20-41-24.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[image]\"; filename=\"2019-01-30 20-41-24.JPG\"\r\nContent-Type: image/jpeg\r\n">, "description"=>"Bagira"}, "commit"=>"Create Photo"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/lis/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[paperclip] Trying to link /tmp/RackMultipart20190516-21129-11lo3ne.JPG to /tmp/308e577a754b01f07feb31cdfa892d1d20190516-21129-1f3ky7c.JPG
+[paperclip] Trying to link /tmp/308e577a754b01f07feb31cdfa892d1d20190516-21129-1f3ky7c.JPG to /tmp/1a292833fa5bb01f45c6c5aa7b3a63ba20190516-21129-1pmwb61.JPG
+Command :: file -b --mime '/tmp/1a292833fa5bb01f45c6c5aa7b3a63ba20190516-21129-1pmwb61.JPG'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/308e577a754b01f07feb31cdfa892d1d20190516-21129-1f3ky7c.JPG[0]' 2>/dev/null
+[paperclip] An error was received while processing: #<Paperclip::Errors::NotIdentifiedByImageMagickError: Paperclip::Errors::NotIdentifiedByImageMagickError>
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/308e577a754b01f07feb31cdfa892d1d20190516-21129-1f3ky7c.JPG[0]' 2>/dev/null
+[paperclip] An error was received while processing: #<Paperclip::Errors::NotIdentifiedByImageMagickError: Paperclip::Errors::NotIdentifiedByImageMagickError>
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/photos_controller.rb:26
+[paperclip] Trying to link /tmp/308e577a754b01f07feb31cdfa892d1d20190516-21129-1f3ky7c.JPG to /tmp/1a292833fa5bb01f45c6c5aa7b3a63ba20190516-21129-xpi9kt.JPG
+Command :: file -b --mime '/tmp/1a292833fa5bb01f45c6c5aa7b3a63ba20190516-21129-xpi9kt.JPG'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/photos_controller.rb:26
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (11.7ms)
+  Rendered photos/new.html.erb within layouts/application (14.1ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+Completed 200 OK in 178ms (Views: 94.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/photos" for ::1 at 2019-05-16 08:55:13 +0300
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KBLtIlyBDQ6tujB+eFErzuyOM5FYAghEJd/jEa84qymV9sajTfwfp9HYg2pkTBisY0EWUzLXfPHuhOSL98qxyw==", "photo"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x00007f6d060a2588 @tempfile=#<Tempfile:/tmp/RackMultipart20190516-21129-1pevag5.jpg>, @original_filename="111.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[image]\"; filename=\"111.jpg\"\r\nContent-Type: image/jpeg\r\n">, "description"=>"Bagira"}, "commit"=>"Create Photo"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/lis/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[paperclip] Trying to link /tmp/RackMultipart20190516-21129-1pevag5.jpg to /tmp/698d51a19d8a121ce581499d7b70166820190516-21129-1ihbczy.jpg
+[paperclip] Trying to link /tmp/698d51a19d8a121ce581499d7b70166820190516-21129-1ihbczy.jpg to /tmp/698d51a19d8a121ce581499d7b70166820190516-21129-mo2m9q.jpg
+Command :: file -b --mime '/tmp/698d51a19d8a121ce581499d7b70166820190516-21129-mo2m9q.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/698d51a19d8a121ce581499d7b70166820190516-21129-1ihbczy.jpg[0]' 2>/dev/null
+[paperclip] An error was received while processing: #<Paperclip::Errors::NotIdentifiedByImageMagickError: Paperclip::Errors::NotIdentifiedByImageMagickError>
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/698d51a19d8a121ce581499d7b70166820190516-21129-1ihbczy.jpg[0]' 2>/dev/null
+[paperclip] An error was received while processing: #<Paperclip::Errors::NotIdentifiedByImageMagickError: Paperclip::Errors::NotIdentifiedByImageMagickError>
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/photos_controller.rb:26
+[paperclip] Trying to link /tmp/698d51a19d8a121ce581499d7b70166820190516-21129-1ihbczy.jpg to /tmp/698d51a19d8a121ce581499d7b70166820190516-21129-1q3cgia.jpg
+Command :: file -b --mime '/tmp/698d51a19d8a121ce581499d7b70166820190516-21129-1q3cgia.jpg'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/photos_controller.rb:26
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (5.8ms)
+  Rendered photos/new.html.erb within layouts/application (7.4ms)
+  Rendered layouts/_navigation.html.erb (7.9ms)
+Completed 200 OK in 206ms (Views: 112.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 08:55:27 +0300
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photos/index.html.erb:1
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:8
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  Rendered photos/index.html.erb within layouts/application (20.7ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+Completed 200 OK in 88ms (Views: 84.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/photos/new" for ::1 at 2019-05-16 08:55:29 +0300
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/lis/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (14.3ms)
+  Rendered photos/new.html.erb within layouts/application (19.1ms)
+  Rendered layouts/_navigation.html.erb (2.5ms)
+Completed 200 OK in 111ms (Views: 104.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/photos" for ::1 at 2019-05-16 08:55:38 +0300
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NOlbq2ec1HKKMBG/KGj2r1SBhaBymGoo6k4Tk/w9s7KI5cvq01HKpPCEOvMfeonqgMhhhoGIgCWI7J3mHQpG9A==", "photo"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x00007f6ce435f3d8 @tempfile=#<Tempfile:/tmp/RackMultipart20190516-21129-k44cw7.jpg>, @original_filename="111.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[image]\"; filename=\"111.jpg\"\r\nContent-Type: image/jpeg\r\n">, "description"=>"Bagira"}, "commit"=>"Create Photo"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/lis/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[paperclip] Trying to link /tmp/RackMultipart20190516-21129-k44cw7.jpg to /tmp/698d51a19d8a121ce581499d7b70166820190516-21129-ll1tqe.jpg
+[paperclip] Trying to link /tmp/698d51a19d8a121ce581499d7b70166820190516-21129-ll1tqe.jpg to /tmp/698d51a19d8a121ce581499d7b70166820190516-21129-8yh2rp.jpg
+Command :: file -b --mime '/tmp/698d51a19d8a121ce581499d7b70166820190516-21129-8yh2rp.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/698d51a19d8a121ce581499d7b70166820190516-21129-ll1tqe.jpg[0]' 2>/dev/null
+[paperclip] An error was received while processing: #<Paperclip::Errors::NotIdentifiedByImageMagickError: Paperclip::Errors::NotIdentifiedByImageMagickError>
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/698d51a19d8a121ce581499d7b70166820190516-21129-ll1tqe.jpg[0]' 2>/dev/null
+[paperclip] An error was received while processing: #<Paperclip::Errors::NotIdentifiedByImageMagickError: Paperclip::Errors::NotIdentifiedByImageMagickError>
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/photos_controller.rb:26
+[paperclip] Trying to link /tmp/698d51a19d8a121ce581499d7b70166820190516-21129-ll1tqe.jpg to /tmp/698d51a19d8a121ce581499d7b70166820190516-21129-11b1peu.jpg
+Command :: file -b --mime '/tmp/698d51a19d8a121ce581499d7b70166820190516-21129-11b1peu.jpg'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/photos_controller.rb:26
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (3.5ms)
+  Rendered photos/new.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_navigation.html.erb (3.0ms)
+Completed 200 OK in 157ms (Views: 69.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/photos" for ::1 at 2019-05-16 08:57:02 +0300
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TYPL58qZLECGhhnZAWrDIf8jK3gJJ0WNoR1Hr5i38rjwZ+Bm2+Q+6frkqs0dd/BDcOwOumPyMThqRkA1wEXoWg==", "photo"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x00007f6ce45501b0 @tempfile=#<Tempfile:/tmp/RackMultipart20190516-21129-j8vqss.jpg>, @original_filename="nastol.com.ua-46325.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[image]\"; filename=\"nastol.com.ua-46325.jpg\"\r\nContent-Type: image/jpeg\r\n">, "description"=>"Bagira"}, "commit"=>"Create Photo"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/lis/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[paperclip] Trying to link /tmp/RackMultipart20190516-21129-j8vqss.jpg to /tmp/32eba1997433675104bb87e97bd3c11e20190516-21129-1xm96ca.jpg
+[paperclip] Trying to link /tmp/32eba1997433675104bb87e97bd3c11e20190516-21129-1xm96ca.jpg to /tmp/32eba1997433675104bb87e97bd3c11e20190516-21129-4luxs8.jpg
+Command :: file -b --mime '/tmp/32eba1997433675104bb87e97bd3c11e20190516-21129-4luxs8.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/32eba1997433675104bb87e97bd3c11e20190516-21129-1xm96ca.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/32eba1997433675104bb87e97bd3c11e20190516-21129-1xm96ca.jpg[0]'
+Command :: convert '/tmp/32eba1997433675104bb87e97bd3c11e20190516-21129-1xm96ca.jpg[0]' -auto-orient -resize "300x300>" '/tmp/02c5a6e9cac323d8bb53ab57cdfd245620190516-21129-po9s8d'
+[paperclip] Trying to link /tmp/02c5a6e9cac323d8bb53ab57cdfd245620190516-21129-po9s8d to /tmp/d9b6d96116bf665be04d16ec1af4f1b820190516-21129-zbtkzh
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/32eba1997433675104bb87e97bd3c11e20190516-21129-1xm96ca.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/32eba1997433675104bb87e97bd3c11e20190516-21129-1xm96ca.jpg[0]'
+Command :: convert '/tmp/32eba1997433675104bb87e97bd3c11e20190516-21129-1xm96ca.jpg[0]' -auto-orient -resize "100x100>" '/tmp/02c5a6e9cac323d8bb53ab57cdfd245620190516-21129-gwyswh'
+[paperclip] Trying to link /tmp/02c5a6e9cac323d8bb53ab57cdfd245620190516-21129-gwyswh to /tmp/10235ae3122ae2c24cb907f412fce1af20190516-21129-1iu2im3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/photos_controller.rb:26
+[paperclip] Trying to link /tmp/32eba1997433675104bb87e97bd3c11e20190516-21129-1xm96ca.jpg to /tmp/32eba1997433675104bb87e97bd3c11e20190516-21129-1texg1m.jpg
+Command :: file -b --mime '/tmp/32eba1997433675104bb87e97bd3c11e20190516-21129-1texg1m.jpg'
+  [1m[36mPhoto Create (1.1ms)[0m  [1m[32mINSERT INTO "photos" ("description", "created_at", "updated_at", "user_id", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Bagira"], ["created_at", "2019-05-16 05:57:03.240607"], ["updated_at", "2019-05-16 05:57:03.240607"], ["user_id", 1], ["image_file_name", "nastol.com.ua-46325.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 426649], ["image_updated_at", "2019-05-16 05:57:02.807447"]]
+  ↳ app/controllers/photos_controller.rb:26
+  [1m[35m (9.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/photos_controller.rb:26
+Redirected to http://localhost:3000/photos/10
+Completed 302 Found in 471ms (ActiveRecord: 11.1ms)
+
+
+Started GET "/photos/10" for ::1 at 2019-05-16 08:57:03 +0300
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:57
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:10
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:13
+  Rendered photos/show.html.erb within layouts/application (16.4ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+Completed 200 OK in 168ms (Views: 163.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 08:57:34 +0300
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photos/index.html.erb:1
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  Rendered photos/index.html.erb within layouts/application (35.3ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+Completed 200 OK in 111ms (Views: 104.3ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/photos/10" for ::1 at 2019-05-16 08:57:49 +0300
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:57
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:13
+  Rendered photos/show.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+Completed 200 OK in 100ms (Views: 97.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 08:58:02 +0300
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photos/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  Rendered photos/index.html.erb within layouts/application (27.2ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+Completed 200 OK in 111ms (Views: 108.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 08:59:50 +0300
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photos/index.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:8
+  [1m[36mCACHE User Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  Rendered photos/index.html.erb within layouts/application (29.2ms)
+  Rendered layouts/_navigation.html.erb (1.8ms)
+Completed 200 OK in 129ms (Views: 123.1ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/photos/10" for ::1 at 2019-05-16 08:59:55 +0300
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:57
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:13
+  Rendered photos/show.html.erb within layouts/application (7.1ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+Completed 200 OK in 104ms (Views: 96.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 09:01:11 +0300
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photos/index.html.erb:1
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  Rendered photos/index.html.erb within layouts/application (28.8ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+Completed 200 OK in 124ms (Views: 116.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 09:05:19 +0300
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photos/index.html.erb:1
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  Rendered photos/index.html.erb within layouts/application (96.2ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+Completed 200 OK in 183ms (Views: 168.7ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 09:05:23 +0300
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (1.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photos/index.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  Rendered photos/index.html.erb within layouts/application (27.6ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+Completed 200 OK in 95ms (Views: 91.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/photos/new" for ::1 at 2019-05-16 09:05:27 +0300
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/lis/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (5.8ms)
+  Rendered photos/new.html.erb within layouts/application (9.3ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+Completed 200 OK in 85ms (Views: 71.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/photos" for ::1 at 2019-05-16 09:05:40 +0300
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J01pCMQkaINOyTrWrLztHIQEyOKR47jAugjfOwQtMQGbQflJcOl2VTR9EZqbrpJZUE0sxGLzUs3YqlFO5RrERw==", "photo"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x00007f6ce432d428 @tempfile=#<Tempfile:/tmp/RackMultipart20190516-21129-udc6ry.jpg>, @original_filename="147672885158051813a2a586.45410780.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[image]\"; filename=\"147672885158051813a2a586.45410780.jpg\"\r\nContent-Type: image/jpeg\r\n">, "description"=>"Природа"}, "commit"=>"Create Photo"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/lis/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[paperclip] Trying to link /tmp/RackMultipart20190516-21129-udc6ry.jpg to /tmp/3c83453a6bd8caeab6fa96371095d04920190516-21129-1wqsolv.jpg
+[paperclip] Trying to link /tmp/3c83453a6bd8caeab6fa96371095d04920190516-21129-1wqsolv.jpg to /tmp/3c83453a6bd8caeab6fa96371095d04920190516-21129-drqjiz.jpg
+Command :: file -b --mime '/tmp/3c83453a6bd8caeab6fa96371095d04920190516-21129-drqjiz.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/3c83453a6bd8caeab6fa96371095d04920190516-21129-1wqsolv.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/3c83453a6bd8caeab6fa96371095d04920190516-21129-1wqsolv.jpg[0]'
+Command :: convert '/tmp/3c83453a6bd8caeab6fa96371095d04920190516-21129-1wqsolv.jpg[0]' -auto-orient -resize "600x600>" '/tmp/0331001d4b4f067ceaf57f5be63c052820190516-21129-73wh93'
+[paperclip] Trying to link /tmp/0331001d4b4f067ceaf57f5be63c052820190516-21129-73wh93 to /tmp/52d7b412a22980aa615cc6b05f6afd5720190516-21129-lko4u1
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/3c83453a6bd8caeab6fa96371095d04920190516-21129-1wqsolv.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/3c83453a6bd8caeab6fa96371095d04920190516-21129-1wqsolv.jpg[0]'
+Command :: convert '/tmp/3c83453a6bd8caeab6fa96371095d04920190516-21129-1wqsolv.jpg[0]' -auto-orient -resize "300x300>" '/tmp/0331001d4b4f067ceaf57f5be63c052820190516-21129-1j5gmqq'
+[paperclip] Trying to link /tmp/0331001d4b4f067ceaf57f5be63c052820190516-21129-1j5gmqq to /tmp/e89c0903ef60acd71134045317787e9020190516-21129-1igbrxv
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/3c83453a6bd8caeab6fa96371095d04920190516-21129-1wqsolv.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/3c83453a6bd8caeab6fa96371095d04920190516-21129-1wqsolv.jpg[0]'
+Command :: convert '/tmp/3c83453a6bd8caeab6fa96371095d04920190516-21129-1wqsolv.jpg[0]' -auto-orient -resize "100x100>" '/tmp/0331001d4b4f067ceaf57f5be63c052820190516-21129-lgb1td'
+[paperclip] Trying to link /tmp/0331001d4b4f067ceaf57f5be63c052820190516-21129-lgb1td to /tmp/0efad6bab755c078ff028d23cf4613f620190516-21129-qt0qoc
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/photos_controller.rb:26
+[paperclip] Trying to link /tmp/3c83453a6bd8caeab6fa96371095d04920190516-21129-1wqsolv.jpg to /tmp/3c83453a6bd8caeab6fa96371095d04920190516-21129-1uwipkb.jpg
+Command :: file -b --mime '/tmp/3c83453a6bd8caeab6fa96371095d04920190516-21129-1uwipkb.jpg'
+  [1m[36mPhoto Create (0.6ms)[0m  [1m[32mINSERT INTO "photos" ("description", "created_at", "updated_at", "user_id", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Природа"], ["created_at", "2019-05-16 06:05:40.874191"], ["updated_at", "2019-05-16 06:05:40.874191"], ["user_id", 1], ["image_file_name", "147672885158051813a2a586.45410780.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 1438646], ["image_updated_at", "2019-05-16 06:05:40.045431"]]
+  ↳ app/controllers/photos_controller.rb:26
+  [1m[35m (9.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/photos_controller.rb:26
+Redirected to http://localhost:3000/photos/11
+Completed 302 Found in 886ms (ActiveRecord: 10.5ms)
+
+
+Started GET "/photos/11" for ::1 at 2019-05-16 09:05:40 +0300
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:57
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:13
+  Rendered photos/show.html.erb within layouts/application (9.8ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+Completed 200 OK in 88ms (Views: 80.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 09:05:44 +0300
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photos/index.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:8
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  Rendered photos/index.html.erb within layouts/application (21.0ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+Completed 200 OK in 131ms (Views: 129.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/photos/10" for ::1 at 2019-05-16 09:05:52 +0300
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:57
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:10
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:13
+  Rendered photos/show.html.erb within layouts/application (6.8ms)
+  Rendered layouts/_navigation.html.erb (1.9ms)
+Completed 200 OK in 78ms (Views: 73.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/system/photos/images/000/000/010/large/nastol.com.ua-46325.jpg?1557986222" for ::1 at 2019-05-16 09:05:52 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/system/photos/images/000/000/010/large/nastol.com.ua-46325.jpg"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started DELETE "/photos/10" for ::1 at 2019-05-16 09:05:56 +0300
+Processing by PhotosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"RReCnAI7ZeJZ84wg5xzkywQmn+tDzL0eHeXeoyq5DTf486kdE0Z3SyWRPzT7Adepi+m6KSkZyavWvtk5cksX1Q==", "id"=>"10"}
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:57
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/lis/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."user_id" = ? AND "photos"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:52
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/photos_controller.rb:45
+  [1m[36mPhoto Destroy (4.3ms)[0m  [1m[31mDELETE FROM "photos" WHERE "photos"."id" = ?[0m  [["id", 10]]
+  ↳ app/controllers/photos_controller.rb:45
+  [1m[35m (20.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/photos_controller.rb:45
+[paperclip] deleting /home/lis/instaphoto/public/system/photos/images/000/000/010/original/nastol.com.ua-46325.jpg
+[paperclip] deleting /home/lis/instaphoto/public/system/photos/images/000/000/010/medium/nastol.com.ua-46325.jpg
+[paperclip] deleting /home/lis/instaphoto/public/system/photos/images/000/000/010/thumb/nastol.com.ua-46325.jpg
+Redirected to http://localhost:3000/photos
+Completed 302 Found in 51ms (ActiveRecord: 25.6ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 09:05:56 +0300
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photos/index.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  Rendered photos/index.html.erb within layouts/application (9.5ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+Completed 200 OK in 71ms (Views: 68.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/photos/7" for ::1 at 2019-05-16 09:06:00 +0300
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:57
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:10
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:13
+  Rendered photos/show.html.erb within layouts/application (12.4ms)
+  Rendered layouts/_navigation.html.erb (4.0ms)
+Completed 200 OK in 120ms (Views: 108.1ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/system/photos/images/000/000/007/large/maxresdefault.jpg?1557839628" for ::1 at 2019-05-16 09:06:00 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/system/photos/images/000/000/007/large/maxresdefault.jpg"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started DELETE "/photos/7" for ::1 at 2019-05-16 09:06:05 +0300
+Processing by PhotosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9DTZFqkP2IzHyto/E5RST0FcU+926UySJZbAsRsqslRJ0PKXuHLKJbuoaSsPiWEtzpN2LRw8OCfuzccrQ9iotg==", "id"=>"7"}
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:57
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/lis/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mPhoto Load (3.5ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."user_id" = ? AND "photos"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:52
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/photos_controller.rb:45
+  [1m[36mPhoto Destroy (0.6ms)[0m  [1m[31mDELETE FROM "photos" WHERE "photos"."id" = ?[0m  [["id", 7]]
+  ↳ app/controllers/photos_controller.rb:45
+  [1m[35m (11.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/photos_controller.rb:45
+[paperclip] deleting /home/lis/instaphoto/public/system/photos/images/000/000/007/original/maxresdefault.jpg
+[paperclip] deleting /home/lis/instaphoto/public/system/photos/images/000/000/007/medium/maxresdefault.jpg
+[paperclip] deleting /home/lis/instaphoto/public/system/photos/images/000/000/007/thumb/maxresdefault.jpg
+Redirected to http://localhost:3000/photos
+Completed 302 Found in 43ms (ActiveRecord: 15.8ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 09:06:05 +0300
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photos/index.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  Rendered photos/index.html.erb within layouts/application (11.9ms)
+  Rendered layouts/_navigation.html.erb (4.5ms)
+Completed 200 OK in 163ms (Views: 160.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/photos/9" for ::1 at 2019-05-16 09:06:07 +0300
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:57
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:13
+  Rendered photos/show.html.erb within layouts/application (9.4ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+Completed 200 OK in 95ms (Views: 91.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/system/photos/images/000/000/009/large/nastol.com.ua-46325.jpg?1557840050" for ::1 at 2019-05-16 09:06:07 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/system/photos/images/000/000/009/large/nastol.com.ua-46325.jpg"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started DELETE "/photos/9" for ::1 at 2019-05-16 09:06:10 +0300
+Processing by PhotosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8V8ylvScfzrGYxHuAkpFoaDYSIVZ6YMX9yngtHz6ypdMuxkX5eFtk7oBovoeV3bDLxdtRzM896I8cucuJAjQdQ==", "id"=>"9"}
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:57
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/lis/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."user_id" = ? AND "photos"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:52
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/photos_controller.rb:45
+  [1m[36mPhoto Destroy (0.6ms)[0m  [1m[31mDELETE FROM "photos" WHERE "photos"."id" = ?[0m  [["id", 9]]
+  ↳ app/controllers/photos_controller.rb:45
+  [1m[35m (17.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/photos_controller.rb:45
+[paperclip] deleting /home/lis/instaphoto/public/system/photos/images/000/000/009/original/nastol.com.ua-46325.jpg
+[paperclip] deleting /home/lis/instaphoto/public/system/photos/images/000/000/009/medium/nastol.com.ua-46325.jpg
+[paperclip] deleting /home/lis/instaphoto/public/system/photos/images/000/000/009/thumb/nastol.com.ua-46325.jpg
+Redirected to http://localhost:3000/photos
+Completed 302 Found in 51ms (ActiveRecord: 24.5ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 09:06:10 +0300
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photos/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:8
+  Rendered photos/index.html.erb within layouts/application (15.7ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+Completed 200 OK in 76ms (Views: 73.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/photos/11" for ::1 at 2019-05-16 09:06:12 +0300
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:57
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:13
+  Rendered photos/show.html.erb within layouts/application (16.9ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+Completed 200 OK in 102ms (Views: 93.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 09:06:37 +0300
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photos/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:8
+  Rendered photos/index.html.erb within layouts/application (22.5ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+Completed 200 OK in 97ms (Views: 93.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/photos/new" for ::1 at 2019-05-16 09:06:38 +0300
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/lis/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (10.5ms)
+  Rendered photos/new.html.erb within layouts/application (13.1ms)
+  Rendered layouts/_navigation.html.erb (1.9ms)
+Completed 200 OK in 167ms (Views: 157.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/photos" for ::1 at 2019-05-16 09:06:48 +0300
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TfMTqlva0YhLtlT05IUtZ7CP3NVDnA7tU88ghuPfXBLx/4Pr7xfPXjECf7jTl1IiZMY487CM5OAxba7zAuipVA==", "photo"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x00007f6d04f03908 @tempfile=#<Tempfile:/tmp/RackMultipart20190516-21129-1r87vq0.jpg>, @original_filename="maxresdefault.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[image]\"; filename=\"maxresdefault.jpg\"\r\nContent-Type: image/jpeg\r\n">, "description"=>"Cat"}, "commit"=>"Create Photo"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/lis/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[paperclip] Trying to link /tmp/RackMultipart20190516-21129-1r87vq0.jpg to /tmp/a43683d33b40f413228d54e3c6ed4a2f20190516-21129-t047c9.jpg
+[paperclip] Trying to link /tmp/a43683d33b40f413228d54e3c6ed4a2f20190516-21129-t047c9.jpg to /tmp/a43683d33b40f413228d54e3c6ed4a2f20190516-21129-nd7uia.jpg
+Command :: file -b --mime '/tmp/a43683d33b40f413228d54e3c6ed4a2f20190516-21129-nd7uia.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/a43683d33b40f413228d54e3c6ed4a2f20190516-21129-t047c9.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/a43683d33b40f413228d54e3c6ed4a2f20190516-21129-t047c9.jpg[0]'
+Command :: convert '/tmp/a43683d33b40f413228d54e3c6ed4a2f20190516-21129-t047c9.jpg[0]' -auto-orient -resize "600x600>" '/tmp/e0c3cbd1013fcfe637282e5d39222e3620190516-21129-1l3lpzq'
+[paperclip] Trying to link /tmp/e0c3cbd1013fcfe637282e5d39222e3620190516-21129-1l3lpzq to /tmp/227e62acc3f3e807c8d3e2bc2f0a7cb820190516-21129-1u3v9a4
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/a43683d33b40f413228d54e3c6ed4a2f20190516-21129-t047c9.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/a43683d33b40f413228d54e3c6ed4a2f20190516-21129-t047c9.jpg[0]'
+Command :: convert '/tmp/a43683d33b40f413228d54e3c6ed4a2f20190516-21129-t047c9.jpg[0]' -auto-orient -resize "300x300>" '/tmp/e0c3cbd1013fcfe637282e5d39222e3620190516-21129-184iubd'
+[paperclip] Trying to link /tmp/e0c3cbd1013fcfe637282e5d39222e3620190516-21129-184iubd to /tmp/80a79218ac83dbc1936457937e8ebc4620190516-21129-1dl7les
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/a43683d33b40f413228d54e3c6ed4a2f20190516-21129-t047c9.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/a43683d33b40f413228d54e3c6ed4a2f20190516-21129-t047c9.jpg[0]'
+Command :: convert '/tmp/a43683d33b40f413228d54e3c6ed4a2f20190516-21129-t047c9.jpg[0]' -auto-orient -resize "100x100>" '/tmp/e0c3cbd1013fcfe637282e5d39222e3620190516-21129-2ii5mi'
+[paperclip] Trying to link /tmp/e0c3cbd1013fcfe637282e5d39222e3620190516-21129-2ii5mi to /tmp/aad46ef5e4f500611f58220b4f8974b120190516-21129-tprxqg
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/photos_controller.rb:26
+[paperclip] Trying to link /tmp/a43683d33b40f413228d54e3c6ed4a2f20190516-21129-t047c9.jpg to /tmp/a43683d33b40f413228d54e3c6ed4a2f20190516-21129-1dcqpva.jpg
+Command :: file -b --mime '/tmp/a43683d33b40f413228d54e3c6ed4a2f20190516-21129-1dcqpva.jpg'
+  [1m[36mPhoto Create (0.5ms)[0m  [1m[32mINSERT INTO "photos" ("description", "created_at", "updated_at", "user_id", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Cat"], ["created_at", "2019-05-16 06:06:49.621905"], ["updated_at", "2019-05-16 06:06:49.621905"], ["user_id", 1], ["image_file_name", "maxresdefault.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 180621], ["image_updated_at", "2019-05-16 06:06:48.947555"]]
+  ↳ app/controllers/photos_controller.rb:26
+  [1m[35m (9.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/photos_controller.rb:26
+Redirected to http://localhost:3000/photos/12
+Completed 302 Found in 712ms (ActiveRecord: 10.4ms)
+
+
+Started GET "/photos/12" for ::1 at 2019-05-16 09:06:49 +0300
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPhoto Load (1.1ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:57
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:10
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:13
+  Rendered photos/show.html.erb within layouts/application (9.3ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+Completed 200 OK in 113ms (Views: 105.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 09:06:51 +0300
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photos/index.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  Rendered photos/index.html.erb within layouts/application (24.1ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+Completed 200 OK in 113ms (Views: 111.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/photos/new" for ::1 at 2019-05-16 09:06:52 +0300
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/lis/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/_form.html.erb (9.9ms)
+  Rendered photos/new.html.erb within layouts/application (14.9ms)
+  Rendered layouts/_navigation.html.erb (3.9ms)
+Completed 200 OK in 141ms (Views: 130.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/photos" for ::1 at 2019-05-16 09:07:20 +0300
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xQ2gfZoSJC5QtXjHt66lZzHU2Ml2e5O/VM9d/BH4bCt5ATA8Lt86+CoBU4uAvNoi5Z0874VrebI2bdOJ8M+ZbQ==", "photo"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x00007f6ce432f458 @tempfile=#<Tempfile:/tmp/RackMultipart20190516-21129-1gez3ck.jpg>, @original_filename="nastol.com.ua-46325.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[image]\"; filename=\"nastol.com.ua-46325.jpg\"\r\nContent-Type: image/jpeg\r\n">, "description"=>"Природа"}, "commit"=>"Create Photo"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/lis/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[paperclip] Trying to link /tmp/RackMultipart20190516-21129-1gez3ck.jpg to /tmp/32eba1997433675104bb87e97bd3c11e20190516-21129-1691gpk.jpg
+[paperclip] Trying to link /tmp/32eba1997433675104bb87e97bd3c11e20190516-21129-1691gpk.jpg to /tmp/32eba1997433675104bb87e97bd3c11e20190516-21129-nnc5s4.jpg
+Command :: file -b --mime '/tmp/32eba1997433675104bb87e97bd3c11e20190516-21129-nnc5s4.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/32eba1997433675104bb87e97bd3c11e20190516-21129-1691gpk.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/32eba1997433675104bb87e97bd3c11e20190516-21129-1691gpk.jpg[0]'
+Command :: convert '/tmp/32eba1997433675104bb87e97bd3c11e20190516-21129-1691gpk.jpg[0]' -auto-orient -resize "600x600>" '/tmp/5156d358c2935935f846a8a5f875ac8220190516-21129-1ojh9f2'
+[paperclip] Trying to link /tmp/5156d358c2935935f846a8a5f875ac8220190516-21129-1ojh9f2 to /tmp/6458ae6f0f6998abc92fbe5e02643c9220190516-21129-c9dlum
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/32eba1997433675104bb87e97bd3c11e20190516-21129-1691gpk.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/32eba1997433675104bb87e97bd3c11e20190516-21129-1691gpk.jpg[0]'
+Command :: convert '/tmp/32eba1997433675104bb87e97bd3c11e20190516-21129-1691gpk.jpg[0]' -auto-orient -resize "300x300>" '/tmp/5156d358c2935935f846a8a5f875ac8220190516-21129-1j85oqi'
+[paperclip] Trying to link /tmp/5156d358c2935935f846a8a5f875ac8220190516-21129-1j85oqi to /tmp/12eae624fa85c590f537bd9f4050a5d320190516-21129-p0g73j
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/32eba1997433675104bb87e97bd3c11e20190516-21129-1691gpk.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/32eba1997433675104bb87e97bd3c11e20190516-21129-1691gpk.jpg[0]'
+Command :: convert '/tmp/32eba1997433675104bb87e97bd3c11e20190516-21129-1691gpk.jpg[0]' -auto-orient -resize "100x100>" '/tmp/5156d358c2935935f846a8a5f875ac8220190516-21129-geojqh'
+[paperclip] Trying to link /tmp/5156d358c2935935f846a8a5f875ac8220190516-21129-geojqh to /tmp/54f660255a0bfce52fc6161c7f69b95e20190516-21129-8mg0sd
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/photos_controller.rb:26
+[paperclip] Trying to link /tmp/32eba1997433675104bb87e97bd3c11e20190516-21129-1691gpk.jpg to /tmp/32eba1997433675104bb87e97bd3c11e20190516-21129-1v6phtd.jpg
+Command :: file -b --mime '/tmp/32eba1997433675104bb87e97bd3c11e20190516-21129-1v6phtd.jpg'
+  [1m[36mPhoto Create (0.7ms)[0m  [1m[32mINSERT INTO "photos" ("description", "created_at", "updated_at", "user_id", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Природа"], ["created_at", "2019-05-16 06:07:20.773975"], ["updated_at", "2019-05-16 06:07:20.773975"], ["user_id", 1], ["image_file_name", "nastol.com.ua-46325.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 426649], ["image_updated_at", "2019-05-16 06:07:20.232405"]]
+  ↳ app/controllers/photos_controller.rb:26
+  [1m[35m (10.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/photos_controller.rb:26
+Redirected to http://localhost:3000/photos/13
+Completed 302 Found in 581ms (ActiveRecord: 11.9ms)
+
+
+Started GET "/photos/13" for ::1 at 2019-05-16 09:07:20 +0300
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:57
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/show.html.erb:13
+  Rendered photos/show.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_navigation.html.erb (5.2ms)
+Completed 200 OK in 86ms (Views: 84.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 09:07:22 +0300
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photos/index.html.erb:1
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  Rendered photos/index.html.erb within layouts/application (24.7ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+Completed 200 OK in 141ms (Views: 138.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 09:08:53 +0300
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photos/index.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/photos/index.html.erb:6
+  Rendered photos/index.html.erb within layouts/application (15.0ms)
+  Rendered layouts/_navigation.html.erb (1.9ms)
+Completed 200 OK in 84ms (Views: 79.3ms | ActiveRecord: 0.5ms)
+
+
