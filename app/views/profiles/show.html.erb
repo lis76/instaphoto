@@ -1,0 +1,28 @@
+<%= @user.email %>
+
+<% if current_user.id == @user.id %>
+  <% else %>
+
+    <% if current_user.subscriptions.exists?(friend_id: @user.id) %>
+      <%= link_to "Отписаться", unsubscribe_profile_path(@user) %>
+      <% else %>
+      <%= link_to "Подписаться", subscribe_profile_path(@user) %>
+      <% end %>
+
+  <% end %>
+
+<br>
+
+<% @user.photos.each do |photo| %>
+  <div class="card devise-form1 container1">
+    <div class="card-header">
+      <%= image_tag photo.image.url(:medium) %><br>
+      <strong><%= photo.description %></strong><br>
+      <%= link_to 'Показать', photo, class: 'btn btn-primary' %>
+      <% if photo.user == current_user %>
+        | <%= link_to 'Редактировать', edit_photo_path(photo), class: 'btn btn-primary' %> |
+        <%= link_to 'Удалить', photo, method: :delete, data: { confirm: 'Вы уверены?' }, class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+<% end %>
