@@ -1,0 +1,8 @@
+<% @friends.each do |friend| %>
+  <div class="card devise-form1 container1">
+    <div class="card-header">
+      <%= link_to friend.email, profile_path(friend.id) %> |
+      <%= link_to "Отписаться", unsubscribe_profile_path(friend.id) %>
+    </div>
+  </div><br>
+<% end %>

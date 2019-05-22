@@ -4,7 +4,7 @@
     before_action :owner, only: [:edit, :update, :destroy]
 
     def index
-      @photos = Photo.all
+      @photos = Photo.all.order('created_at DESC')
     end
 
     def show
