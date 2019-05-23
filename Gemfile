@@ -29,6 +29,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise', '~> 4.3'
 gem "paperclip"
 gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
+gem 'will_paginate'
+gem 'will_paginate-bootstrap'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
