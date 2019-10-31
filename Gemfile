@@ -26,7 +26,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem 'devise', '~> 4.3'
+gem 'devise', '~> 4.7'
 gem "paperclip"
 gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
 gem 'will_paginate'
